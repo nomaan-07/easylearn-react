@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'vazir black';
+  src: url('/fonts/vazir/Vazir-Black-FD.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'vazir bold';
+  src: url('/fonts/vazir/Vazir-Bold-FD.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'vazir light';
+  src: url('/fonts/vazir/Vazir-Light-FD.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'vazir medium';
+  src: url('/fonts/vazir/Vazir-Medium-FD.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'vazir regular';
+  src: url('/fonts/vazir/Vazir-Regular-FD.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'vazir thin';
+  src: url('/fonts/vazir/Vazir-Thin-FD.woff2') format('woff2');
+}
+
+@theme {
+  --font-vazir-black: 'vazir black', sans-serif;
+  --font-vazir-bold: 'vazir bold', sans-serif;
+  --font-vazir-light: 'vazir light', sans-serif;
+  --font-vazir-medium: 'vazir medium', sans-serif;
+  --font-vazir: 'vazir regular', sans-serif;
+  --font-vazir-thin: 'vazir thin', sans-serif;
+}
+
+@utility container {
+  margin-left: auto;
+  margin-right: auto;
+}
