@@ -1,5 +1,5 @@
 function App() {
-  return <div>آیزی لرن</div>;
+  return <div>ایزی لرن</div>;
 }
 
 export default App;
