@@ -30,6 +30,90 @@
   src: url("/fonts/vazir/Vazir-Thin-FD.woff2") format("woff2");
 }
 
+:root {
+  --default-color: var(--color-fuchsia-600);
+  --hover-color: var(--color-fuchsia-700);
+}
+
+html.fuchsia {
+  /* fuchsia-600 */
+  --default-color: oklch(0.591 0.293 322.896);
+  /* fuchsia-700 */
+  --hover-color: oklch(0.518 0.253 323.949);
+}
+
+html.dark.fuchsia:root {
+  /* fuchsia-500 */
+  --default-color: oklch(0.667 0.295 322.15);
+  /* fuchsia-600 */
+  --hover-color: oklch(0.591 0.293 322.896);
+}
+
+html.amber,
+html.dark.amber {
+  /* amber-600 */
+  --default-color: oklch(0.666 0.179 58.318);
+  /* amber-700 */
+  --hover-color: oklch(0.555 0.163 48.998);
+}
+
+html.dark.rose,
+html.rose {
+  /* rose-600 */
+  --default-color: oklch(0.586 0.253 17.585);
+  /* rose-700 */
+  --hover-color: oklch(0.514 0.222 16.935);
+}
+
+html.violet {
+  /* violet-600 */
+  --default-color: oklch(0.541 0.281 293.009);
+  /* violet-700 */
+  --hover-color: oklch(0.491 0.27 292.581);
+}
+html.dark.violet {
+  /* violet-500 */
+  --default-color: oklch(0.606 0.25 292.717);
+  /* violet-600 */
+  --hover-color: oklch(0.541 0.281 293.009);
+}
+
+html.sky {
+  /* sky-600 */
+  --default-color: oklch(0.588 0.158 241.966);
+  /* sky-700 */
+  --hover-color: oklch(0.5 0.134 242.749);
+}
+
+html.dark.sky {
+  /* sky-500 */
+  --default-color: oklch(0.685 0.169 237.323);
+  /* sky-600 */
+  --hover-color: oklch(0.588 0.158 241.966);
+}
+
+html.emerald {
+  /* emerald-600 */
+  --default-color: oklch(0.596 0.145 163.225);
+  /* emerald-700 */
+  --hover-color: oklch(0.508 0.118 165.612);
+}
+
+html.dark.emerald {
+  /* emerald-500 */
+  --default-color: oklch(0.696 0.17 162.48);
+  /* emerald-600 */
+  --hover-color: oklch(0.596 0.145 163.225);
+}
+
+html.lime,
+html.dark.lime {
+  /* lime-600 */
+  --default-color: oklch(0.648 0.2 131.684);
+  /* lime-700 */
+  --hover-color: oklch(0.532 0.157 131.589);
+}
+
 @theme {
   --font-vazir-black: "vazir black", sans-serif;
   --font-vazir-bold: "vazir bold", sans-serif;
@@ -37,6 +121,9 @@
   --font-vazir-medium: "vazir medium", sans-serif;
   --font-vazir: "vazir regular", sans-serif;
   --font-vazir-thin: "vazir thin", sans-serif;
+
+  --color-theme: var(--default-color);
+  --color-hover: var(--hover-color);
 }
 
 @utility container {

@@ -13,7 +13,7 @@ const defaultStyles = {
 };
 
 function Logo({ type = "logo", className = "" }) {
-  const styles = `block ${defaultStyles[type]} ${className}`;
+  const styles = `text-theme hover:text-hover block transition-colors delay-75 ${defaultStyles[type]} ${className}`;
 
   return (
     <Link to="/" className={styles} aria-label="Home">
