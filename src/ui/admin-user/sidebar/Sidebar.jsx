@@ -4,7 +4,7 @@ import SidebarNav from "./SidebarNav";
 
 function Sidebar() {
   return (
-    <aside className="row-span-2 p-3 ltr:border-r ltr:border-r-sky-100 rtl:border-l rtl:border-l-sky-100 dark:border-slate-700">
+    <aside className="navigation fixed top-0 bottom-0 row-span-2 w-64 overflow-y-auto p-3 ltr:left-0 ltr:border-r ltr:border-r-sky-100 rtl:right-0 rtl:border-l rtl:border-l-sky-100 dark:border-slate-700">
       <Logo type="textLogo" className="mx-auto" />
       <SidebarNav />
       <Logout />

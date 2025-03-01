@@ -38,83 +38,59 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html.fuchsia {
-  /* fuchsia-600 */
-  --default-color: oklch(0.591 0.293 322.896);
-  /* fuchsia-700 */
-  --hover-color: oklch(0.518 0.253 323.949);
+  --default-color: var(--color-fuchsia-600);
+  --hover-color: var(--color-fuchsia-700);
 }
 
 html.dark.fuchsia,
 html.dark {
-  /* fuchsia-500 */
-  --default-color: oklch(0.667 0.295 322.15);
-  /* fuchsia-600 */
-  --hover-color: oklch(0.591 0.293 322.896);
+  --default-color: var(--color-fuchsia-500);
+  --hover-color: var(--color-fuchsia-600);
 }
 
-html.amber,
-html.dark.amber {
-  /* amber-600 */
-  --default-color: oklch(0.666 0.179 58.318);
-  /* amber-700 */
-  --hover-color: oklch(0.555 0.163 48.998);
+html.amber {
+  --default-color: var(--color-amber-600);
+  --hover-color: var(--color-amber-700);
 }
 
-html.dark.rose,
 html.rose {
-  /* rose-600 */
-  --default-color: oklch(0.586 0.253 17.585);
-  /* rose-700 */
-  --hover-color: oklch(0.514 0.222 16.935);
+  --default-color: var(--color-rose-600);
+  --hover-color: var(--color-rose-700);
 }
 
 html.violet {
-  /* violet-600 */
-  --default-color: oklch(0.541 0.281 293.009);
-  /* violet-700 */
-  --hover-color: oklch(0.491 0.27 292.581);
+  --default-color: var(--color-violet-600);
+  --hover-color: var(--color-violet-700);
 }
+
 html.dark.violet {
-  /* violet-500 */
-  --default-color: oklch(0.606 0.25 292.717);
-  /* violet-600 */
-  --hover-color: oklch(0.541 0.281 293.009);
+  --default-color: var(--color-violet-500);
+  --hover-color: var(--color-violet-600);
 }
 
 html.sky {
-  /* sky-600 */
-  --default-color: oklch(0.588 0.158 241.966);
-  /* sky-700 */
-  --hover-color: oklch(0.5 0.134 242.749);
+  --default-color: var(--color-sky-600);
+  --hover-color: var(--color-sky-700);
 }
 
 html.dark.sky {
-  /* sky-500 */
-  --default-color: oklch(0.685 0.169 237.323);
-  /* sky-600 */
-  --hover-color: oklch(0.588 0.158 241.966);
+  --default-color: var(--color-sky-500);
+  --hover-color: var(--color-sky-600);
 }
 
 html.emerald {
-  /* emerald-600 */
-  --default-color: oklch(0.596 0.145 163.225);
-  /* emerald-700 */
-  --hover-color: oklch(0.508 0.118 165.612);
+  --default-color: var(--color-emerald-600);
+  --hover-color: var(--color-emerald-700);
 }
 
 html.dark.emerald {
-  /* emerald-500 */
-  --default-color: oklch(0.696 0.17 162.48);
-  /* emerald-600 */
-  --hover-color: oklch(0.596 0.145 163.225);
+  --default-color: var(--color-emerald-500);
+  --hover-color: var(--color-emerald-600);
 }
 
-html.lime,
-html.dark.lime {
-  /* lime-600 */
-  --default-color: oklch(0.648 0.2 131.684);
-  /* lime-700 */
-  --hover-color: oklch(0.532 0.157 131.589);
+html.lime {
+  --default-color: var(--color-lime-600);
+  --hover-color: var(--color-lime-700);
 }
 
 @theme {
@@ -130,13 +106,37 @@ html.dark.lime {
   --color-hover: var(--hover-color);
 }
 
+@layer base {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-theme/50 cursor-pointer rounded-full border-x border-x-transparent;
+  }
+}
+
 @utility container {
   margin-left: auto;
   margin-right: auto;
 }
 
-@layer components {
-  .sidebar-nav-item .active {
+@utility sidebar-nav-item {
+  .active {
     @apply bg-theme/5 text-theme;
+  }
+}
+
+@utility navigation {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-transparent transition-all;
+  }
+
+  &:hover&::-webkit-scrollbar-thumb {
+    @apply bg-theme/50;
   }
 }
