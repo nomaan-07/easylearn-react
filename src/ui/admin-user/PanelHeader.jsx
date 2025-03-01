@@ -1,4 +1,4 @@
-import { useLanguage } from "../../features/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 function PanelHeader() {
   const { language, changeLanguage } = useLanguage();
