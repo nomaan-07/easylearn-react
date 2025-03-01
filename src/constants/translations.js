@@ -16,6 +16,9 @@ export const translations = {
       account: "account",
       settings: "settings",
     },
+    websiteInfo: {
+      developerName: "Nomaan Rigi kooteh",
+    },
   },
 
   fa: {
@@ -34,6 +37,9 @@ export const translations = {
       income: "درآمد",
       account: "اکانت",
       settings: "تنظیمات",
+    },
+    websiteInfo: {
+      developerName: "نعمان ریگی کوته",
     },
   },
 };

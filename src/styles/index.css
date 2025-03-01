@@ -137,6 +137,6 @@ html.lime {
   }
 
   &:hover&::-webkit-scrollbar-thumb {
-    @apply bg-theme/50;
+    @apply bg-theme/20;
   }
 }

@@ -6,7 +6,7 @@ import PanelMain from "./PanelMain";
 
 function PanelLayout() {
   return (
-    <div className="grid h-screen grid-cols-[16rem_1fr] grid-rows-[auto_1fr]">
+    <div className="grid h-screen grid-cols-[17rem_1fr] grid-rows-[auto_1fr]">
       <Sidebar />
       <PanelHeader />
       <PanelMain>

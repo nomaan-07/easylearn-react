@@ -7,7 +7,7 @@ function PanelHeader() {
   const translate = useTranslation();
 
   return (
-    <header className="col-start-2 row-start-1 bg-red-500">
+    <header className="col-start-2 row-start-1">
       <button onClick={changeLanguage}>
         {translate("common.changeLanguage")}
       </button>

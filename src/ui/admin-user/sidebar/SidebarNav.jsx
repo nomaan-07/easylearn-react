@@ -1,16 +1,14 @@
-import { useLocation } from "react-router-dom";
-
-import { adminMenu, userMenu } from "../../../constants/sidebarMenus";
-
 import SidebarNavItem from "./SidebarNavItem";
 
+import { adminMenu, userMenu } from "../../../constants/sidebarMenus";
+import { useAdminPageCheck } from "../../../hooks/useAdminPageCheck";
+
 function SidebarNav() {
-  const location = useLocation();
-  const isAdmin = location.pathname.includes("/admin");
-  const menu = isAdmin ? adminMenu : userMenu;
+  const isAdminPage = useAdminPageCheck();
+  const menu = isAdminPage ? adminMenu : userMenu;
 
   return (
-    <ul className="row-span-4 my-24 space-y-2">
+    <ul className="mt-8 grow space-y-2">
       {menu.map((item) => (
         <SidebarNavItem item={item} key={item.id} />
       ))}
