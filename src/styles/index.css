@@ -35,6 +35,8 @@
   --hover-color: var(--color-fuchsia-700);
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html.fuchsia {
   /* fuchsia-600 */
   --default-color: oklch(0.591 0.293 322.896);
@@ -42,7 +44,8 @@ html.fuchsia {
   --hover-color: oklch(0.518 0.253 323.949);
 }
 
-html.dark.fuchsia:root {
+html.dark.fuchsia,
+html.dark {
   /* fuchsia-500 */
   --default-color: oklch(0.667 0.295 322.15);
   /* fuchsia-600 */

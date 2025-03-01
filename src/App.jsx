@@ -4,6 +4,7 @@ import PanelLayout from "./ui/admin-user/PanelLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import UserDashboard from "./pages/user/UserDashboard";
 import ErrorPage from "./ui/common/ErrorPage";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
+  );
 }
 
 export default App;
