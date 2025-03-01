@@ -1,11 +1,11 @@
-import { useLanguage } from "../../../hooks/useLanguage";
 import { Link, NavLink } from "react-router-dom";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 function SidebarNavItem({ item }) {
-  const { language } = useLanguage();
+  const translate = useTranslation();
 
   const Icon = item.icon.type;
-  const title = language === "fa" ? item.faTitle : item.enTitle;
+  const title = translate(`sidebarNav.${item.title}`);
 
   return (
     <li className="sidebar-nav-item">
