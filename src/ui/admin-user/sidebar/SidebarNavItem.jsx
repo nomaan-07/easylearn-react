@@ -9,7 +9,7 @@ function SidebarNavItem({ item }) {
     <li className="sidebar-nav-item">
       <NavLink
         to={item.path}
-        className="hover:bg-theme/5 hover:text-theme rtl:font-vazir-medium flex items-center gap-4 rounded-md px-6 py-3 text-lg transition-colors ltr:font-medium"
+        className="md:hover:bg-theme/5 md:hover:text-theme rtl:font-vazir-medium flex items-center gap-4 rounded-md px-6 py-3 text-lg transition-colors ltr:font-medium"
         aria-label={title}
       >
         <Icon className="size-6" />

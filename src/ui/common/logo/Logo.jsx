@@ -7,13 +7,16 @@ const logos = {
   logo: <LogoOnly />,
 };
 
-const defaultStyles = {
+const defaultStyles =
+  "text-theme md:hover:text-hover block transition-colors delay-75";
+
+const variationStyles = {
   textLogo: "w-50",
   logo: "size-18",
 };
 
 function Logo({ type = "logo", className = "" }) {
-  const styles = `text-theme hover:text-hover block transition-colors delay-75 ${defaultStyles[type]} ${className}`;
+  const styles = `${defaultStyles} ${variationStyles[type]} ${className}`;
 
   return (
     <Link to="/" className={styles} aria-label="Home">

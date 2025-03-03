@@ -1,16 +1,15 @@
-import { HiOutlineBars3 } from "react-icons/hi2";
-import HeaderButton from "../../common/HeaderButton";
 import PanelHeaderButtons from "./PanelHeaderButtons";
+import PanelHeaderMobileButtons from "./PanelHeaderMobileButtons";
 import PanelHeaderUserInfo from "./PanelHeaderUserInfo";
+import PanelSidebarOpenButton from "./PanelSidebarOpenButton";
 
 function PanelHeader() {
   return (
     <header className="mt-6 flex items-center justify-between rounded-2xl">
-      <HeaderButton className="lg:hidden">
-        <HiOutlineBars3 className="size-6" />
-      </HeaderButton>
+      <PanelSidebarOpenButton />
       <PanelHeaderUserInfo />
       <PanelHeaderButtons />
+      <PanelHeaderMobileButtons />
     </header>
   );
 }

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleDarkMode } from "../../slices/darkModeSlice";
 import { useEffect } from "react";
 
-function DarkModeToggle() {
+function DarkModeToggle({ variation }) {
   const darkMode = useSelector((state) => state.darkMode.darkMode);
   const dispatch = useDispatch();
 
@@ -22,6 +22,7 @@ function DarkModeToggle() {
     <HeaderButton
       onClick={() => dispatch(toggleDarkMode())}
       ariaLabel="Toggle Dark Mode"
+      variation={variation}
     >
       <HiOutlineMoon className="size-6" />
     </HeaderButton>

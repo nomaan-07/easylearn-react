@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeLanguage } from "../../slices/languageSlice";
 import { useEffect } from "react";
 
-function LanguageSwitch() {
+function LanguageSwitch({ variation }) {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
 
@@ -18,6 +18,7 @@ function LanguageSwitch() {
     <HeaderButton
       onClick={() => dispatch(changeLanguage())}
       ariaLabel={`Change Language to ${language === "en" ? "Persian" : "English"}`}
+      variation={variation}
     >
       <HiOutlineLanguage className="size-6" />
     </HeaderButton>

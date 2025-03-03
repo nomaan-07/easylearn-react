@@ -1,9 +1,9 @@
 const baseStyles =
-  "hover:text-theme flex items-center justify-center rounded-sm p-2 transition-colors md:cursor-pointer";
+  "md:hover:text-theme size-10 flex items-center justify-center rounded-sm p-2 transition-colors md:cursor-pointer";
 
 const variationStyles = {
   panel: `${baseStyles} bg-white dark:bg-slate-800`,
-  main: `${baseStyles} `,
+  main: `${baseStyles} bg-slate-100 dark:bg-slate-700`,
   notification: "relative",
 };
 
