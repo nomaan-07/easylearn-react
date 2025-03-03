@@ -10,19 +10,20 @@ const variationStyles = {
 function HeaderButton({
   variation = "panel",
   className = "",
-  notification,
+  notification = false,
+  ariaLabel = "",
   onClick,
   children,
 }) {
   const styles = `${variationStyles[variation]} ${className} ${notification ? variationStyles["notification"] : ""}`;
 
   return (
-    <div className={styles} role="button" onClick={onClick}>
+    <button className={styles} aria-label={ariaLabel} onClick={onClick}>
       {children}
       {notification && (
         <span className="bg-theme absolute top-2 size-2.5 rounded-full border-2 border-white ltr:right-2.5 rtl:left-2.5 dark:border-slate-800"></span>
       )}
-    </div>
+    </button>
   );
 }
 

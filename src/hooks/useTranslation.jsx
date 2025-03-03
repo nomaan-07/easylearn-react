@@ -1,8 +1,8 @@
+import { useSelector } from "react-redux";
 import { translations } from "../constants/translations";
-import { useLanguage } from "./useLanguage";
 
 export function useTranslation(key) {
-  const { language } = useLanguage();
+  const language = useSelector((state) => state.language.language);
 
   const keys = key.split(".");
 

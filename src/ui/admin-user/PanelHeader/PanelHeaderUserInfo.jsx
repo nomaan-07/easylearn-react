@@ -1,16 +1,16 @@
-import { useLanguage } from "../../../hooks/useLanguage";
+import { useSelector } from "react-redux";
 import { useTranslation } from "../../../hooks/useTranslation";
 import { getToday } from "../../../utils/helpers";
 
 function PanelHeaderUserInfo() {
-  const { language } = useLanguage();
+  const language = useSelector((state) => state.language.language);
 
   const userFirstName = useTranslation("websiteInfo.developerFirstName");
   const today = getToday(language);
 
   return (
-    <div className="space-y-1 capitalize">
-      <div className="flex items-center gap-2 text-2xl">
+    <div className="capitalize lg:space-y-1">
+      <div className="flex items-center gap-2 text-lg md:text-xl lg:text-2xl">
         <span className="rtl:font-vazir-bold ltr:font-bold">
           {useTranslation("common.hello")}
           {useTranslation("marks.comma")}
@@ -19,7 +19,9 @@ function PanelHeaderUserInfo() {
           {userFirstName}
         </span>
       </div>
-      <span className="rtl:font-vazir-light ltr:font-light">{today}</span>
+      <span className="rtl:font-vazir-light text-xs md:text-sm lg:text-base ltr:font-light">
+        {today}
+      </span>
     </div>
   );
 }

@@ -8,7 +8,7 @@ function PanelLayout() {
   return (
     <>
       <Sidebar />
-      <div className="container space-y-8 ltr:pl-74 rtl:pr-74">
+      <div className="container space-y-8 lg:ltr:pl-74 lg:rtl:pr-74">
         <PanelHeader />
         <PanelMain>
           <Outlet />

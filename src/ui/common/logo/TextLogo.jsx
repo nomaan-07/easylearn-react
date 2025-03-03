@@ -1,7 +1,7 @@
-import { useLanguage } from "../../../hooks/useLanguage";
+import { useSelector } from "react-redux";
 
 function TextLogo() {
-  const { language } = useLanguage();
+  const language = useSelector((state) => state.language.language);
 
   if (language === "en")
     return (

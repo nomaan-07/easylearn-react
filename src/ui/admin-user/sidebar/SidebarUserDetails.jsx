@@ -7,7 +7,7 @@ function SidebarUserDetails() {
   return (
     <div className="mt-3 flex flex-col items-center gap-2 border-t border-t-slate-100 pt-4 dark:border-t-slate-600">
       <img
-        src="/public/images/avatar-1.jpg"
+        src="/images/avatar-1.jpg"
         alt="admin image"
         className="size-20 rounded-full"
       />
