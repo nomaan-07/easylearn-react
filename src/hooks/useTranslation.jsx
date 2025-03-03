@@ -1,11 +1,10 @@
 import { translations } from "../constants/translations";
 import { useLanguage } from "./useLanguage";
 
-export function useTranslation() {
+export function useTranslation(key) {
   const { language } = useLanguage();
 
-  return (key) => {
-    const keys = key.split(".");
-    return keys.reduce((obj, key) => obj?.[key], translations[language]) || key;
-  };
+  const keys = key.split(".");
+
+  return keys.reduce((obj, key) => obj?.[key], translations[language]) || key;
 }

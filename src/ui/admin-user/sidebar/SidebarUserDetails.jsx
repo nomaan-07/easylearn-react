@@ -1,8 +1,8 @@
 import { useTranslation } from "../../../hooks/useTranslation";
 
 function SidebarUserDetails() {
-  const translate = useTranslation();
-  const userFullName = translate("websiteInfo.developerName");
+  const userFirstName = useTranslation("websiteInfo.developerFirstName");
+  const userLastName = useTranslation("websiteInfo.developerLastName");
 
   return (
     <div className="mt-3 flex flex-col items-center gap-2 border-t border-t-slate-100 pt-4 dark:border-t-slate-600">
@@ -12,7 +12,7 @@ function SidebarUserDetails() {
         className="size-20 rounded-full"
       />
       <span className="rtl:font-vazir-medium text-center text-sm text-slate-400 ltr:font-medium dark:text-slate-300">
-        {userFullName}
+        {userFirstName} {userLastName}
       </span>
     </div>
   );

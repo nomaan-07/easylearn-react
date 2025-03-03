@@ -5,6 +5,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import UserDashboard from "./pages/user/UserDashboard";
 import ErrorPage from "./ui/common/ErrorPage";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { DarkModeProvider } from "./contexts/DarkModeContext";
 
 const router = createBrowserRouter([
   {
@@ -41,9 +42,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <LanguageProvider>
-      <RouterProvider router={router} />
-    </LanguageProvider>
+    <DarkModeProvider>
+      <LanguageProvider>
+        <RouterProvider router={router} />
+      </LanguageProvider>
+    </DarkModeProvider>
   );
 }
 

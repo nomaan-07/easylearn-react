@@ -3,6 +3,7 @@ export const translations = {
     common: {
       changeLanguage: "Change Language",
       logout: "Logout",
+      hello: "hello",
     },
 
     sidebarNav: {
@@ -17,7 +18,11 @@ export const translations = {
       settings: "settings",
     },
     websiteInfo: {
-      developerName: "Nomaan Rigi kooteh",
+      developerFirstName: "Nomaan",
+      developerLastName: "Rigi kooteh",
+    },
+    marks: {
+      comma: ",",
     },
   },
 
@@ -25,6 +30,7 @@ export const translations = {
     common: {
       changeLanguage: "تغییر زبان",
       logout: "خروج",
+      hello: "سلام",
     },
 
     sidebarNav: {
@@ -39,7 +45,11 @@ export const translations = {
       settings: "تنظیمات",
     },
     websiteInfo: {
-      developerName: "نعمان ریگی کوته",
+      developerFirstName: "نعمان",
+      developerLastName: "ریگی کوته",
+    },
+    marks: {
+      comma: "،",
     },
   },
 };

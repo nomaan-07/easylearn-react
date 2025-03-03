@@ -2,10 +2,8 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "../../../hooks/useTranslation";
 
 function SidebarNavItem({ item }) {
-  const translate = useTranslation();
-
   const Icon = item.icon.type;
-  const title = translate(`sidebarNav.${item.title}`);
+  const title = useTranslation(`sidebarNav.${item.title}`);
 
   return (
     <li className="sidebar-nav-item">
