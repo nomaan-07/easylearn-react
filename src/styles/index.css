@@ -93,6 +93,11 @@ html.lime {
   --hover-color: var(--color-lime-700);
 }
 
+html.pink {
+  --default-color: var(--color-pink-500);
+  --hover-color: var(--color-pink-600);
+}
+
 @theme {
   --font-vazir-black: "vazir black", sans-serif;
   --font-vazir-bold: "vazir bold", sans-serif;

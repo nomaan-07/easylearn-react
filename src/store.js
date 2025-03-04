@@ -3,6 +3,7 @@ import darkModeReducer from "./slices/darkModeSlice";
 import languageReducer from "./slices/languageSlice";
 import panelSidebarReducer from "./slices/panelSidebarSlice";
 import panelHeaderButtonsReducer from "./slices/panelHeaderButtonsSlice";
+import themeReducer from "./slices/themeSlice";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     language: languageReducer,
     panelSidebar: panelSidebarReducer,
     panelHeaderButtons: panelHeaderButtonsReducer,
+    theme: themeReducer,
   },
 });
 

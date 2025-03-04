@@ -8,6 +8,7 @@ import LanguageSwitch from "../../../features/common/LanguageSwitch";
 import HeaderButton from "../../common/HeaderButton";
 import { useDispatch, useSelector } from "react-redux";
 import { togglePanelHeaderButtons } from "../../../slices/panelHeaderButtonsSlice";
+import ChangeTheme from "../../../features/common/ChangeTheme/ChangeTheme";
 
 function PanelHeaderMobileButtons() {
   const isMenuOpen = useSelector((state) => state.panelHeaderButtons.isOpen);
@@ -21,7 +22,7 @@ function PanelHeaderMobileButtons() {
         ariaLabel={`${isMenuOpen ? "Close" : "Open"} Header Menu`}
       >
         {isMenuOpen ? (
-          <HiOutlineXMark className="size-6" />
+          <HiOutlineXMark className="text-theme size-6" />
         ) : (
           <HiOutlineEllipsisVertical className="size-6" />
         )}
@@ -34,6 +35,7 @@ function PanelHeaderMobileButtons() {
         <HeaderButton notification={true} ariaLabel="Panel Notifications">
           <HiOutlineBell className="size-6" />
         </HeaderButton>
+        <ChangeTheme />
       </div>
     </div>
   );

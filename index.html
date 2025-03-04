@@ -5,6 +5,23 @@
     <link rel="icon" type="image/png" href="/favicons/fuchsia-favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ایزی لرن</title>
+    <script>
+      const theme = localStorage.getItem("theme") || "fuchsia";
+      const darkMode =
+        localStorage.getItem("darkMode") === "true" ? "dark" : "";
+      const language = localStorage.getItem("language") || "en";
+
+      document.documentElement.className = `${darkMode} ${theme}`;
+      document.documentElement.setAttribute(
+        "dir",
+        language === "en" ? "ltr" : "rtl",
+      );
+      document.documentElement.setAttribute(
+        "lang",
+        language === "en" ? "en" : "fa",
+      );
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
